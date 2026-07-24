@@ -28,7 +28,7 @@
 <header class="site-header" id="siteHeader">
   <div class="container header-inner">
     <a href="#home" class="brand">
-      <img src="assets/logo.png" alt="Sapanca Business Group" class="brand-logo">
+      <span class="logo-badge"><img src="assets/logo.png" alt="Sapanca Business Group" class="brand-logo"></span>
       <span class="brand-text">
         <span class="brand-name">Sapanca Business Group</span>
         <span class="brand-tag" data-i18n="footer.tagline">Connecting Ethiopia and Turkey</span>
@@ -74,7 +74,10 @@
 <!-- HERO -->
 <section class="hero" id="home">
   <div class="hero-media">
-    <img src="assets/images/hero-istanbul.jpg" alt="Bosphorus Bridge, Istanbul" class="hero-img">
+    <picture>
+      <source media="(max-width: 640px)" srcset="assets/images/hero-istanbul-mobile.jpg">
+      <img src="assets/images/hero-istanbul.jpg" alt="Bosphorus Bridge, Istanbul" class="hero-img">
+    </picture>
     <div class="hero-scrim"></div>
   </div>
 
@@ -401,7 +404,7 @@
 <footer class="site-footer">
   <div class="container footer-inner">
     <div class="footer-brand">
-      <img src="assets/logo.png" alt="Sapanca Business Group" class="footer-logo">
+      <span class="logo-badge logo-badge-lg"><img src="assets/logo.png" alt="Sapanca Business Group" class="footer-logo"></span>
       <p data-i18n="footer.tagline">Connecting Ethiopia and Turkey</p>
     </div>
 
