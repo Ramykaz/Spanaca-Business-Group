@@ -168,7 +168,7 @@ const translations = {
     "contact.base": "Base", "contact.baseValue": "Ankara, Turkey",
     "contact.whatsapp": "WhatsApp / Phone",
     "contact.emailLabel": "Email",
-    "contact.languages": "We speak", "contact.languagesValue": "Amharic · Turkish · English · Arabic",
+    "contact.languages": "We speak", "contact.languagesValue": "Amharic · Oromiffa · Turkish · English · Arabic",
     "contact.whatsappCta": "Chat on WhatsApp",
 
     "form.firstName": "First Name", "form.lastName": "Last Name",
@@ -267,7 +267,7 @@ const translations = {
     "contact.base": "Merkez", "contact.baseValue": "Ankara, Türkiye",
     "contact.whatsapp": "WhatsApp / Telefon",
     "contact.emailLabel": "E-posta",
-    "contact.languages": "Konuştuğumuz diller", "contact.languagesValue": "Amharca · Türkçe · İngilizce · Arapça",
+    "contact.languages": "Konuştuğumuz diller", "contact.languagesValue": "Amharca · Oromoca · Türkçe · İngilizce · Arapça",
     "contact.whatsappCta": "WhatsApp'tan Yazın",
 
     "form.firstName": "Ad", "form.lastName": "Soyad",
@@ -366,7 +366,7 @@ const translations = {
     "contact.base": "መሠረት", "contact.baseValue": "አንካራ፣ ቱርክ",
     "contact.whatsapp": "ዋትስአፕ / ስልክ",
     "contact.emailLabel": "ኢሜይል",
-    "contact.languages": "የምንናገራቸው ቋንቋዎች", "contact.languagesValue": "አማርኛ · ቱርክኛ · እንግሊዝኛ · አረብኛ",
+    "contact.languages": "የምንናገራቸው ቋንቋዎች", "contact.languagesValue": "አማርኛ · ኦሮምኛ · ቱርክኛ · እንግሊዝኛ · አረብኛ",
     "contact.whatsappCta": "በዋትስአፕ ያውሩን",
 
     "form.firstName": "የመጀመሪያ ስም", "form.lastName": "የአባት ስም",
