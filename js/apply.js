@@ -100,7 +100,7 @@
   const submitBtn = applyForm.querySelector(".form-submit");
   const submitLabel = submitBtn.textContent;
 
-  const EMAIL_ENDPOINT = "https://formsubmit.co/ajax/ramadanshemsu341@gmail.com";
+  const EMAIL_ENDPOINT = "https://formsubmit.co/ajax/info@sapanjabusinessgroup.com";
 
   function labelFor(selectEl){
     return selectEl.options[selectEl.selectedIndex].text;

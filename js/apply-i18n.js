@@ -6,11 +6,11 @@ const translations = {
     "nav.cta": "Get in Touch",
 
     "hero.eyebrow": "Fall 2026-27 Applications · Last Call",
-    "hero.headline": "Study in Turkey This Fall, Before the Window Closes",
+    "hero.headline": "Study in Türkiye This Fall, Before the Window Closes",
     "hero.subheadline": "100% acceptance at our selected partner universities in Istanbul, Ankara, and beyond.",
-    "hero.body": "We are now accepting applications for the Fall 2026-27 intake. Our partner universities in Turkey offer world-class education at a fraction of the cost of Europe or North America. Our team guides you through the application process, all the way to your acceptance letter, with consulting and advice for the steps that follow.",
+    "hero.body": "We are now accepting applications for the Fall 2026-27 intake. Our partner universities in Türkiye offer world-class education at a fraction of the cost of Europe or North America. Our team guides you through the application process, all the way to your acceptance letter, with consulting and advice for the steps that follow.",
     "hero.cta": "Apply Now",
-    "hero.stat1.num": "350,000+", "hero.stat1.label": "international students in Turkey",
+    "hero.stat1.num": "350,000+", "hero.stat1.label": "international students in Türkiye",
     "hero.stat2.num": "100%", "hero.stat2.label": "acceptance at our partner universities",
     "hero.stat3.num": "3+", "hero.stat3.label": "intake cities: Istanbul, Ankara & more",
 
@@ -19,7 +19,7 @@ const translations = {
     "why.item1.title": "Firsthand Guidance",
     "why.item1.desc": "We have personally gone through this process ourselves.",
     "why.item2.title": "100% Acceptance",
-    "why.item2.desc": "At our selected partner universities in Turkey.",
+    "why.item2.desc": "At our selected partner universities in Türkiye.",
     "why.item3.title": "Application Consulting",
     "why.item3.desc": "We guide your application through to your acceptance letter, with honest advice on the steps that follow.",
     "why.item4.title": "We Speak Your Language",
@@ -30,7 +30,7 @@ const translations = {
     "cities.istanbul": "Istanbul",
     "cities.ankara": "Ankara",
     "cities.other": "Other Turkish Cities",
-    "cities.otherDesc": "Additional partner universities across Turkey",
+    "cities.otherDesc": "Additional partner universities across Türkiye",
 
     "form.eyebrow": "Apply Now",
     "form.headline": "Tell us about your goals",
@@ -58,8 +58,8 @@ const translations = {
     "form.successNote": "Submission received. We will contact you shortly.",
     "form.errorNote": "Something went wrong. Please contact us directly on WhatsApp or by phone.",
 
-    "footer.tagline": "Connecting Ethiopia and Turkey",
-    "footer.rights": "Sapanja Business Group. Ankara, Turkey."
+    "footer.tagline": "Connecting Ethiopia and Türkiye",
+    "footer.rights": "Sapanja Business Group. Ankara, Türkiye."
   },
 
   tr: {

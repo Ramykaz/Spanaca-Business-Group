@@ -160,10 +160,19 @@
     counters.forEach(function(el){ cio.observe(el); });
   }
 
-  /* ---------------- Contact form -> WhatsApp ---------------- */
+  /* ---------------- Contact form ---------------- */
   const contactForm = document.getElementById("contactForm");
   const formNote = document.getElementById("formNote");
-  contactForm.addEventListener("submit", function(e){
+  const contactSubmitBtn = contactForm.querySelector(".form-submit");
+  const contactSubmitLabel = contactSubmitBtn.textContent;
+  const CONTACT_EMAIL_ENDPOINT = "https://formsubmit.co/ajax/info@sapanjabusinessgroup.com";
+
+  function contactDict(){
+    const lang = root.getAttribute("data-current-lang") || "en";
+    return translations[lang] || translations.en;
+  }
+
+  contactForm.addEventListener("submit", async function(e){
     e.preventDefault();
     const data = new FormData(contactForm);
     const first = (data.get("firstName") || "").toString().trim();
@@ -173,22 +182,46 @@
     const interest = document.getElementById("interest");
     const interestLabel = interest.options[interest.selectedIndex].text;
     const message = (data.get("message") || "").toString().trim();
+    const fullName = (first + " " + last).trim();
 
-    const lines = [
-      "Hello Sapanja Business Group,",
-      "Name: " + first + " " + last,
-      "Email: " + email,
-      "Phone: " + phone,
-      "Interested in: " + interestLabel,
-      "Message: " + message
-    ];
-    const waUrl = "https://wa.me/905016582922?text=" + encodeURIComponent(lines.join("\n"));
+    contactSubmitBtn.disabled = true;
+    contactSubmitBtn.textContent = contactDict()["form.sending"] || "Sending...";
+    formNote.textContent = "";
+    formNote.classList.remove("form-note-error");
 
-    const lang = root.getAttribute("data-current-lang") || "en";
-    formNote.textContent = (translations[lang] && translations[lang]["form.successNote"]) || translations.en["form.successNote"];
+    const telegramPromise = fetch("/api/contact", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ name: fullName, email: email, phone: phone, interest: interestLabel, message: message })
+    }).then(function(r){ return r.ok; }).catch(function(){ return false; });
 
-    window.open(waUrl, "_blank", "noopener");
-    contactForm.reset();
+    const emailPromise = fetch(CONTACT_EMAIL_ENDPOINT, {
+      method: "POST",
+      headers: { "Content-Type": "application/json", "Accept": "application/json" },
+      body: JSON.stringify({
+        _subject: "New Website Contact: " + fullName,
+        "Name": fullName,
+        "Email": email,
+        "Phone / WhatsApp": phone,
+        "Interested in": interestLabel,
+        "Message": message
+      })
+    }).then(function(r){ return r.ok; }).catch(function(){ return false; });
+
+    const results = await Promise.all([telegramPromise, emailPromise]);
+    const delivered = results.some(function(ok){ return ok; });
+
+    contactSubmitBtn.disabled = false;
+    contactSubmitBtn.textContent = contactSubmitLabel;
+
+    const dict = contactDict();
+    if(delivered){
+      formNote.textContent = dict["form.successNote"] || translations.en["form.successNote"];
+      contactForm.reset();
+    } else {
+      formNote.textContent = dict["form.errorNote"] || translations.en["form.errorNote"];
+      formNote.classList.add("form-note-error");
+    }
   });
 
   /* ---------------- Footer year ---------------- */

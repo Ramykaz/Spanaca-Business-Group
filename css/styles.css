@@ -476,6 +476,7 @@ html[data-current-lang="am"] h4{ font-family:'Noto Sans Ethiopic','Bricolage Gro
 .form-field textarea{ resize: vertical; min-height:100px; }
 .form-submit{ width:100%; justify-content:center; margin-top:.4rem; }
 .form-note{ text-align:center; margin: .9rem 0 0; font-size:.88rem; color: var(--gold); min-height:1.2em; }
+.form-note-error{ color: #c0503a; }
 
 /* ---------- Footer ---------- */
 .site-footer{ background: var(--navy); color: rgba(245,239,228,.8); padding-top: 4.5rem; }
