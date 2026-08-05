@@ -125,7 +125,9 @@
     const rows = [
       ["Submitted", new Date().toLocaleString()],
       ["Full Name", data.fullName],
-      ["WhatsApp / Phone", data.phone],
+      ["Email", data.email],
+      ["WhatsApp / Telegram", data.phone],
+      ["Department", data.department],
       ["Degree Level", data.level],
       ["Preferred City", data.city],
       ["Annual Tuition Budget", data.budget]
@@ -152,7 +154,9 @@
   applyForm.addEventListener("submit", function(e){
     e.preventDefault();
     const fullName = document.getElementById("fullName").value.trim();
+    const email = document.getElementById("email").value.trim();
     const phone = document.getElementById("phone").value.trim();
+    const department = document.getElementById("department").value.trim();
     const level = labelFor(document.getElementById("level"));
     const city = labelFor(document.getElementById("city"));
     const budget = labelFor(document.getElementById("budget"));
@@ -162,7 +166,9 @@
       "I'm interested in studying in Turkey for the Fall 2026-27 intake.",
       "",
       "Full Name: " + fullName,
-      "WhatsApp / Phone: " + phone,
+      "Email: " + email,
+      "WhatsApp / Telegram: " + phone,
+      "Department: " + department,
       "Degree Level: " + level,
       "Preferred City: " + city,
       "Annual Tuition Budget: " + budget
@@ -170,7 +176,7 @@
     const waUrl = "https://wa.me/905016582922?text=" + encodeURIComponent(lines.join("\n"));
 
     try{
-      buildPdf({ fullName: fullName, phone: phone, level: level, city: city, budget: budget });
+      buildPdf({ fullName: fullName, email: email, phone: phone, department: department, level: level, city: city, budget: budget });
     } catch(err){ /* PDF is a bonus; WhatsApp delivery below is what matters */ }
 
     const lang = root.getAttribute("data-current-lang") || "en";

@@ -167,9 +167,19 @@
         <label for="fullName" data-i18n="form.fullName">Full Name</label>
         <input type="text" id="fullName" name="fullName" required>
       </div>
+      <div class="form-row">
+        <div class="form-field">
+          <label for="email" data-i18n="form.email">Email Address</label>
+          <input type="email" id="email" name="email" required>
+        </div>
+        <div class="form-field">
+          <label for="phone" data-i18n="form.phone">WhatsApp / Telegram Number</label>
+          <input type="tel" id="phone" name="phone" required>
+        </div>
+      </div>
       <div class="form-field">
-        <label for="phone" data-i18n="form.phone">WhatsApp / Phone Number</label>
-        <input type="tel" id="phone" name="phone" required>
+        <label for="department" data-i18n="form.department">Department / Field of Study</label>
+        <input type="text" id="department" name="department" required>
       </div>
       <div class="form-row">
         <div class="form-field">
@@ -198,8 +208,8 @@
           <option value="b4" data-i18n="form.budget.b4">$6,000+</option>
         </select>
       </div>
-      <button type="submit" class="btn btn-gold form-submit" data-i18n="form.submit">Send My Interest via WhatsApp</button>
-      <p class="form-note form-note-static" data-i18n="form.note">This opens WhatsApp with your details filled in, and saves a PDF copy for your records.</p>
+      <button type="submit" class="btn btn-gold form-submit" data-i18n="form.submit">Send Application</button>
+      <p class="form-note form-note-static" data-i18n="form.note">This sends your details to us on WhatsApp and saves a PDF copy for your records.</p>
       <p class="form-note" id="formNote"></p>
     </form>
   </div>
