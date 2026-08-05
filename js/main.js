@@ -238,6 +238,7 @@
       pre.classList.add("done");
     }
     if(video){
+      video.playbackRate = 2.0;
       video.addEventListener("ended", dismiss);
       video.addEventListener("error", dismiss);
       video.play().catch(dismiss);

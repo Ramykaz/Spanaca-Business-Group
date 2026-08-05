@@ -30,7 +30,6 @@ const translations = {
     "cities.istanbul": "Istanbul",
     "cities.ankara": "Ankara",
     "cities.other": "Other Turkish Cities",
-    "cities.otherDesc": "Additional partner universities across Türkiye",
 
     "form.eyebrow": "Apply Now",
     "form.headline": "Tell us about your goals",
@@ -91,7 +90,6 @@ const translations = {
     "cities.istanbul": "İstanbul",
     "cities.ankara": "Ankara",
     "cities.other": "Diğer Türk Şehirleri",
-    "cities.otherDesc": "Türkiye genelinde ek ortak üniversiteler",
 
     "form.eyebrow": "Şimdi Başvur",
     "form.headline": "Hedeflerinizi bize anlatın",
@@ -152,7 +150,6 @@ const translations = {
     "cities.istanbul": "ኢስታንቡል",
     "cities.ankara": "አንካራ",
     "cities.other": "ሌሎች የቱርክ ከተሞች",
-    "cities.otherDesc": "በመላው ቱርክ ተጨማሪ አጋር ዩኒቨርሲቲዎች",
 
     "form.eyebrow": "አሁን ያመልክቱ",
     "form.headline": "ስለ ግቦችዎ ይንገሩን",
