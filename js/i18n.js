@@ -113,6 +113,7 @@ const translations = {
     "nav.home": "Home", "nav.about": "About", "nav.services": "Services",
     "nav.corridor": "The Corridor", "nav.process": "How It Works", "nav.contact": "Contact",
     "nav.cta": "Get in Touch",
+    "nav.apply": "Fall 2026-27 Applications",
 
     "hero.eyebrow": "Ankara · Addis Ababa · Istanbul",
     "hero.headline": "Where East Africa meets Anatolia.",
@@ -217,6 +218,7 @@ const translations = {
     "nav.home": "Ana Sayfa", "nav.about": "Hakkımızda", "nav.services": "Hizmetler",
     "nav.corridor": "Koridor", "nav.process": "Süreç", "nav.contact": "İletişim",
     "nav.cta": "Bize Ulaşın",
+    "nav.apply": "Güz 2026-27 Başvuruları",
 
     "hero.eyebrow": "Ankara · Addis Ababa · İstanbul",
     "hero.headline": "Doğu Afrika'nın Anadolu ile buluştuğu yer.",
@@ -321,6 +323,7 @@ const translations = {
     "nav.home": "መነሻ", "nav.about": "ስለ እኛ", "nav.services": "አገልግሎቶች",
     "nav.corridor": "ኮሪደሩ", "nav.process": "አሰራሩ", "nav.contact": "አግኙን",
     "nav.cta": "ያግኙን",
+    "nav.apply": "የመኸር 2026-27 ማመልከቻዎች",
 
     "hero.eyebrow": "አንካራ · አዲስ አበባ · ኢስታንቡል",
     "hero.headline": "ምስራቅ አፍሪካ ከአናቶሊያ የሚገናኙበት ቦታ።",
