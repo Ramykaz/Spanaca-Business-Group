@@ -57,7 +57,7 @@ const translations = {
     "form.successNote": "Submission received. We will contact you shortly.",
     "form.errorNote": "Something went wrong. Please contact us directly on WhatsApp or by phone.",
 
-    "footer.tagline": "Connecting Ethiopia and Türkiye",
+    "footer.tagline": "A Bridge Between Nations",
     "footer.rights": "Sapanja Business Group. Ankara, Türkiye."
   },
 
@@ -117,7 +117,7 @@ const translations = {
     "form.successNote": "Başvurunuz alındı. Kısa süre içinde sizinle iletişime geçeceğiz.",
     "form.errorNote": "Bir şeyler ters gitti. Lütfen doğrudan WhatsApp veya telefon ile bize ulaşın.",
 
-    "footer.tagline": "Etiyopya ile Türkiye'yi Birbirine Bağlıyoruz",
+    "footer.tagline": "Uluslar Arasında Bir Köprü",
     "footer.rights": "Sapanja Business Group. Ankara, Türkiye."
   },
 
@@ -177,7 +177,7 @@ const translations = {
     "form.successNote": "ማመልከቻዎ ደርሶናል። በቅርቡ እናገኝዎታለን።",
     "form.errorNote": "የሆነ ችግር ተፈጥሯል። እባክዎ በቀጥታ በዋትስአፕ ወይም በስልክ ያግኙን።",
 
-    "footer.tagline": "ኢትዮጵያን እና ቱርክን እናገናኛለን",
+    "footer.tagline": "በሀገራት መካከል ያለ ድልድይ",
     "footer.rights": "ሳፓንጃ ቢዝነስ ግሩፕ። አንካራ፣ ቱርክ።"
   }
 };
