@@ -97,61 +97,21 @@
   /* ---------------- Application form ---------------- */
   const applyForm = document.getElementById("applyForm");
   const formNote = document.getElementById("formNote");
+  const submitBtn = applyForm.querySelector(".form-submit");
+  const submitLabel = submitBtn.textContent;
+
+  const EMAIL_ENDPOINT = "https://formsubmit.co/ajax/ramadanshemsu341@gmail.com";
 
   function labelFor(selectEl){
     return selectEl.options[selectEl.selectedIndex].text;
   }
 
-  function buildPdf(data){
-    if(!window.jspdf){ return; }
-    const { jsPDF } = window.jspdf;
-    const doc = new jsPDF();
-    const navy = [20, 33, 56];
-    const gold = [196, 144, 58];
-
-    doc.setFillColor(navy[0], navy[1], navy[2]);
-    doc.rect(0, 0, 210, 32, "F");
-    doc.setTextColor(255,255,255);
-    doc.setFont("helvetica", "bold");
-    doc.setFontSize(18);
-    doc.text("Sapanja Business Group", 15, 16);
-    doc.setFontSize(11);
-    doc.setFont("helvetica", "normal");
-    doc.setTextColor(gold[0], gold[1], gold[2]);
-    doc.text("Fall 2026-27 Education Application Interest", 15, 24);
-
-    doc.setTextColor(40,40,40);
-    let y = 46;
-    const rows = [
-      ["Submitted", new Date().toLocaleString()],
-      ["Full Name", data.fullName],
-      ["Email", data.email],
-      ["WhatsApp / Telegram", data.phone],
-      ["Department", data.department],
-      ["Degree Level", data.level],
-      ["Preferred City", data.city],
-      ["Annual Tuition Budget", data.budget]
-    ];
-    rows.forEach(function(row){
-      doc.setFont("helvetica", "bold");
-      doc.setFontSize(11);
-      doc.text(row[0] + ":", 15, y);
-      doc.setFont("helvetica", "normal");
-      doc.text(String(row[1]), 70, y);
-      y += 10;
-    });
-
-    doc.setDrawColor(gold[0], gold[1], gold[2]);
-    doc.line(15, y + 2, 195, y + 2);
-    doc.setFontSize(9);
-    doc.setTextColor(120,120,120);
-    doc.text("Ankara, Turkey  |  +90 501 658 29 22  |  info@sapancabusinessgroup.com", 15, y + 10);
-
-    const safeName = (data.fullName || "applicant").replace(/[^a-z0-9]+/gi, "-").toLowerCase();
-    doc.save("sapanja-application-" + safeName + ".pdf");
+  function currentDict(){
+    const lang = root.getAttribute("data-current-lang") || "en";
+    return translations[lang] || translations.en;
   }
 
-  applyForm.addEventListener("submit", function(e){
+  applyForm.addEventListener("submit", async function(e){
     e.preventDefault();
     const fullName = document.getElementById("fullName").value.trim();
     const email = document.getElementById("email").value.trim();
@@ -161,29 +121,46 @@
     const city = labelFor(document.getElementById("city"));
     const budget = labelFor(document.getElementById("budget"));
 
-    const lines = [
-      "Hello Sapanja Business Group,",
-      "I'm interested in studying in Turkey for the Fall 2026-27 intake.",
-      "",
-      "Full Name: " + fullName,
-      "Email: " + email,
-      "WhatsApp / Telegram: " + phone,
-      "Department: " + department,
-      "Degree Level: " + level,
-      "Preferred City: " + city,
-      "Annual Tuition Budget: " + budget
-    ];
-    const waUrl = "https://wa.me/905016582922?text=" + encodeURIComponent(lines.join("\n"));
+    submitBtn.disabled = true;
+    submitBtn.textContent = currentDict()["form.sending"] || "Sending...";
+    formNote.textContent = "";
+    formNote.classList.remove("form-note-error");
 
-    try{
-      buildPdf({ fullName: fullName, email: email, phone: phone, department: department, level: level, city: city, budget: budget });
-    } catch(err){ /* PDF is a bonus; WhatsApp delivery below is what matters */ }
+    const telegramPromise = fetch("/api/apply", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ fullName, email, phone, department, level, city, budget })
+    }).then(function(r){ return r.ok; }).catch(function(){ return false; });
 
-    const lang = root.getAttribute("data-current-lang") || "en";
-    formNote.textContent = (translations[lang] && translations[lang]["form.successNote"]) || translations.en["form.successNote"];
+    const emailPromise = fetch(EMAIL_ENDPOINT, {
+      method: "POST",
+      headers: { "Content-Type": "application/json", "Accept": "application/json" },
+      body: JSON.stringify({
+        _subject: "New Fall 2026-27 Application: " + fullName,
+        "Full Name": fullName,
+        "Email": email,
+        "WhatsApp / Telegram": phone,
+        "Department": department,
+        "Degree Level": level,
+        "Preferred City": city,
+        "Annual Tuition Budget": budget
+      })
+    }).then(function(r){ return r.ok; }).catch(function(){ return false; });
 
-    window.open(waUrl, "_blank", "noopener");
-    applyForm.reset();
+    const results = await Promise.all([telegramPromise, emailPromise]);
+    const delivered = results.some(function(ok){ return ok; });
+
+    submitBtn.disabled = false;
+    submitBtn.textContent = submitLabel;
+
+    const dict = currentDict();
+    if(delivered){
+      formNote.textContent = dict["form.successNote"] || translations.en["form.successNote"];
+      applyForm.reset();
+    } else {
+      formNote.textContent = dict["form.errorNote"] || translations.en["form.errorNote"];
+      formNote.classList.add("form-note-error");
+    }
   });
 
   /* ---------------- Footer year ---------------- */

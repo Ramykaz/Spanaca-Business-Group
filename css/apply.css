@@ -70,6 +70,7 @@
 /* ---------- Form ---------- */
 .apply-form{ max-width: 640px; margin: 0 auto; }
 .form-note-static{ color: var(--text-muted); font-size:.85rem; }
+.form-note-error{ color: #c0503a; }
 
 /* ---------- Footer ---------- */
 .apply-footer-inner{ grid-template-columns: 1fr auto; align-items:center; }

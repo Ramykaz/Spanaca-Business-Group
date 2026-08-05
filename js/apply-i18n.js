@@ -53,8 +53,10 @@ const translations = {
     "form.budget.b3": "$4,000 - $6,000",
     "form.budget.b4": "$6,000+",
     "form.submit": "Send Application",
-    "form.note": "This sends your details to us on WhatsApp and saves a PDF copy for your records.",
+    "form.sending": "Sending...",
+    "form.note": "This sends your application directly to our team so we can get back to you.",
     "form.successNote": "Submission received. We will contact you shortly.",
+    "form.errorNote": "Something went wrong. Please contact us directly on WhatsApp or by phone.",
 
     "footer.tagline": "Connecting Ethiopia and Turkey",
     "footer.rights": "Sapanja Business Group. Ankara, Turkey."
@@ -112,8 +114,10 @@ const translations = {
     "form.budget.b3": "4.000 - 6.000 dolar",
     "form.budget.b4": "6.000 dolar ve üzeri",
     "form.submit": "Başvuruyu Gönder",
-    "form.note": "Bu, bilgilerinizi WhatsApp üzerinden bize gönderir ve kayıtlarınız için bir PDF kopyası kaydeder.",
+    "form.sending": "Gönderiliyor...",
+    "form.note": "Bu, başvurunuzu doğrudan ekibimize gönderir, böylece size geri dönebiliriz.",
     "form.successNote": "Başvurunuz alındı. Kısa süre içinde sizinle iletişime geçeceğiz.",
+    "form.errorNote": "Bir şeyler ters gitti. Lütfen doğrudan WhatsApp veya telefon ile bize ulaşın.",
 
     "footer.tagline": "Etiyopya ile Türkiye'yi Birbirine Bağlıyoruz",
     "footer.rights": "Sapanja Business Group. Ankara, Türkiye."
@@ -171,8 +175,10 @@ const translations = {
     "form.budget.b3": "$4,000 - $6,000",
     "form.budget.b4": "$6,000+",
     "form.submit": "ማመልከቻ ላክ",
-    "form.note": "ይህ ዝርዝርዎን በዋትስአፕ በኩል ወደ እኛ ይልካል፣ እናም ለመዝገብዎ የPDF ቅጂ ያስቀምጣል።",
+    "form.sending": "በመላክ ላይ...",
+    "form.note": "ይህ ማመልከቻዎን በቀጥታ ወደ ቡድናችን ይልካል፣ እናም እኛ ልናገኝዎት እንችላለን።",
     "form.successNote": "ማመልከቻዎ ደርሶናል። በቅርቡ እናገኝዎታለን።",
+    "form.errorNote": "የሆነ ችግር ተፈጥሯል። እባክዎ በቀጥታ በዋትስአፕ ወይም በስልክ ያግኙን።",
 
     "footer.tagline": "ኢትዮጵያን እና ቱርክን እናገናኛለን",
     "footer.rights": "ሳፓንጃ ቢዝነስ ግሩፕ። አንካራ፣ ቱርክ።"
