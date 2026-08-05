@@ -24,7 +24,7 @@
 
   /* ---------------- Language ---------------- */
   function renderServiceLists(lang){
-    const map = { service1: "service1List", service2: "service2List", service3: "service3List" };
+    const map = { service1: "service1List", service2: "service2List", service3: "service3List", service4: "service4List" };
     Object.keys(map).forEach(function(key){
       const el = document.getElementById(map[key]);
       if(!el) return;
@@ -142,9 +142,9 @@
     function tick(now){
       const progress = Math.min((now - start) / duration, 1);
       const eased = 1 - Math.pow(1 - progress, 3);
-      el.textContent = Math.floor(eased * target).toLocaleString();
+      el.textContent = Math.floor(eased * target).toLocaleString("en-US");
       if(progress < 1){ requestAnimationFrame(tick); }
-      else { el.textContent = target.toLocaleString(); }
+      else { el.textContent = target.toLocaleString("en-US"); }
     }
     requestAnimationFrame(tick);
   }
@@ -175,7 +175,7 @@
     const message = (data.get("message") || "").toString().trim();
 
     const lines = [
-      "Hello Sapanca Business Group,",
+      "Hello Sapanja Business Group,",
       "Name: " + first + " " + last,
       "Email: " + email,
       "Phone: " + phone,
@@ -195,10 +195,24 @@
   document.getElementById("year").textContent = new Date().getFullYear();
 
   /* ---------------- Preloader ---------------- */
-  window.addEventListener("load", function(){
+  (function(){
     const pre = document.getElementById("preloader");
-    setTimeout(function(){ pre.classList.add("done"); }, 350);
-  });
+    const video = document.querySelector(".preloader-video");
+    let dismissed = false;
+    function dismiss(){
+      if(dismissed) return;
+      dismissed = true;
+      pre.classList.add("done");
+    }
+    if(video){
+      video.addEventListener("ended", dismiss);
+      video.addEventListener("error", dismiss);
+      video.play().catch(dismiss);
+      setTimeout(dismiss, 12000);
+    } else {
+      window.addEventListener("load", function(){ setTimeout(dismiss, 350); });
+    }
+  })();
 
   /* ---------------- Init ---------------- */
   initTheme();

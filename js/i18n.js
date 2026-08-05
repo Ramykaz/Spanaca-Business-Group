@@ -1,4 +1,4 @@
-/* Sapanca Business Group - translations (EN / TR / AM) */
+/* Sapanja Business Group - translations (EN / TR / AM) */
 
 const SERVICE_LISTS = {
   en: {
@@ -26,6 +26,14 @@ const SERVICE_LISTS = {
       "Export/import documentation guidance",
       "Customs process support",
       "Logistics coordination"
+    ],
+    service4: [
+      "Market and sector opportunity assessment",
+      "Due diligence and local partner vetting",
+      "Regulatory, legal, and tax introductions",
+      "Real estate and land acquisition guidance",
+      "Connections to vetted local partners and developers",
+      "Ongoing on-the-ground representation"
     ]
   },
   tr: {
@@ -53,6 +61,14 @@ const SERVICE_LISTS = {
       "İhracat/ithalat belge danışmanlığı",
       "Gümrük süreci desteği",
       "Lojistik koordinasyonu"
+    ],
+    service4: [
+      "Pazar ve sektör fırsat değerlendirmesi",
+      "Durum tespiti ve yerel ortak incelemesi",
+      "Düzenleyici, hukuki ve vergi tanıştırmaları",
+      "Gayrimenkul ve arazi edinimi danışmanlığı",
+      "Onaylı yerel ortaklara ve geliştiricilere bağlantı",
+      "Sürekli yerinde temsil"
     ]
   },
   am: {
@@ -80,6 +96,14 @@ const SERVICE_LISTS = {
       "የወጪ/ገቢ ንግድ ሰነድ መመሪያ",
       "የጉምሩክ ሂደት ድጋፍ",
       "የሎጂስቲክስ ማስተባበር"
+    ],
+    service4: [
+      "የገበያ እና የዘርፍ እድል ግምገማ",
+      "ጥንቃቄ ማጣራት እና የአካባቢ አጋር ምርመራ",
+      "የቁጥጥር፣ የህግ እና የግብር ትውውቆች",
+      "የሪል እስቴት እና የመሬት ማግኛ መመሪያ",
+      "ወደ የተረጋገጡ የአካባቢ አጋሮች እና ገንቢዎች ግንኙነት",
+      "ቀጣይ በቦታው ውክልና"
     ]
   }
 };
@@ -93,7 +117,7 @@ const translations = {
     "hero.eyebrow": "Ankara · Addis Ababa · Istanbul",
     "hero.headline": "Where East Africa meets Anatolia.",
     "hero.subheadline": "We connect Ethiopia and Turkey through education, health, and trade.",
-    "hero.body": "Sapanca Business Group is an Ankara-based, cross-border business group founded by Ethiopians living in Turkey. We know both sides of this corridor personally: the universities, the hospitals, the customs offices, and the communities. We are here to make the journey between Ethiopia and Turkey easier, faster, and more trustworthy.",
+    "hero.body": "Sapanja Business Group is an Ankara-based, cross-border business group founded by Ethiopians living in Turkey. We know both sides of this corridor personally: the universities, the hospitals, the customs offices, and the communities. We are here to make the journey between Ethiopia and Turkey easier, faster, and more trustworthy.",
     "hero.cta1": "Our Services", "hero.cta2": "Get in Touch",
 
     "stats.students": "int'l students in Turkey",
@@ -102,7 +126,7 @@ const translations = {
 
     "about.eyebrow": "Who We Are",
     "about.headline": "Built by people who know both worlds",
-    "about.body1": "Sapanca Business Group was founded by a group of Ethiopian professionals based in Turkey. The idea was born in Sapanca, the city that gave us our name, and we operate from Ankara with active relationships across Turkey, including Istanbul, and within the Ethiopian business and diaspora community.",
+    "about.body1": "Sapanja Business Group was founded by a group of Ethiopian professionals based in Turkey. The idea was born on the shores of Sapanca, the lakeside town that inspired our name, and we operate from Ankara with active relationships across Turkey, including Istanbul, and within the Ethiopian business and diaspora community.",
     "about.body2": "We are not a large agency with decades on the wall. We are a focused, experienced group with deep roots in both Ethiopia and Turkey: people who have personally gone through the visa process, navigated Turkish universities, dealt with customs, and built relationships on both sides. That firsthand knowledge is what we bring to every client.",
     "about.body3": "We work with students, patients, businesses, and families who need a trusted guide through the corridor between Ethiopia and Turkey. We take on what we know, we are honest about what we don't, and we see every case through to the end.",
     "about.imageCaption": "Ankara Castle, Turkey",
@@ -112,8 +136,8 @@ const translations = {
     "about.value4.title": "End-to-End", "about.value4.desc": "From the first conversation to the final result, we stay involved",
 
     "services.eyebrow": "What We Do",
-    "services.headline": "Three areas. One corridor.",
-    "services.intro": "We focus on three core service areas where the connection between Ethiopia and Turkey creates real, consistent demand, and where our knowledge of both sides makes a genuine difference.",
+    "services.headline": "Four areas. One corridor.",
+    "services.intro": "We focus on four core service areas where the connection between Ethiopia and Turkey creates real, consistent demand, and where our knowledge of both sides makes a genuine difference.",
 
     "service1.title": "Education Consulting",
     "service1.tagline": "Getting Ethiopian students to Turkish universities, the right way.",
@@ -130,6 +154,11 @@ const translations = {
     "service3.body": "Ethiopia and Turkey already trade significantly, but most of that flow goes through large brokers with no community connection. We work with businesses and individuals who want to move goods between the two countries with someone who understands both markets. Ethiopian specialty products, such as coffee, leather, and textiles, have real demand in Turkey, while Turkish construction materials, machinery, and manufactured goods are in high demand in Ethiopia.",
     "service3.imageCaption": "Port logistics",
 
+    "service4.title": "Investment Consulting",
+    "service4.tagline": "Guiding serious investors into Ethiopia's next chapter of growth.",
+    "service4.body": "Ethiopia is one of Africa's fastest-growing economies, with real opportunity in real estate, manufacturing, agriculture, and infrastructure. For investors based in Turkey, or anyone in our network ready to put capital into Ethiopia's future, we bring the same firsthand guidance we bring to every client: honest opportunity assessment, local due diligence, and a team that stays with you from the first conversation to the final deal.",
+    "service4.imageCaption": "Addis Ababa's growing skyline",
+
     "additional.eyebrow": "Also Available",
     "additional.headline": "Supporting services",
     "additional.item1.title": "Translation & Documentation",
@@ -143,7 +172,7 @@ const translations = {
     "corridor.headline": "A connection that goes back centuries",
     "corridor.body1": "The Ottoman Empire had a formal province covering parts of what is now Ethiopia and Eritrea, called Habeş Eyaleti. The first Turkish Embassy in sub-Saharan Africa opened in Addis Ababa in 1926. Today, over 200 Turkish companies operate in Ethiopia with an estimated $2.5 billion invested, making Turkey one of Ethiopia's largest foreign investors.",
     "corridor.body2": "This corridor has deep roots. What it has lacked is a trusted, experienced, community-rooted group that knows both sides personally, not just professionally.",
-    "corridor.body3": "That is what Sapanca Business Group is.",
+    "corridor.body3": "That is what Sapanja Business Group is.",
     "corridor.fact1": "international students currently study in Turkey",
     "corridor.fact2": "of them are from African countries",
     "corridor.fact3": "Turkey is among the top health tourism destinations globally",
@@ -192,7 +221,7 @@ const translations = {
     "hero.eyebrow": "Ankara · Addis Ababa · İstanbul",
     "hero.headline": "Doğu Afrika'nın Anadolu ile buluştuğu yer.",
     "hero.subheadline": "Etiyopya ile Türkiye'yi eğitim, sağlık ve ticaret alanlarında birbirine bağlıyoruz.",
-    "hero.body": "Sapanca Business Group, Türkiye'de yaşayan Etiyopyalılar tarafından kurulmuş, Ankara merkezli, sınır ötesi bir iş grubudur. Bu koridorun her iki yakasını da şahsen tanıyoruz: üniversiteleri, hastaneleri, gümrük ofislerini ve toplulukları. Etiyopya ile Türkiye arasındaki yolculuğu daha kolay, daha hızlı ve daha güvenilir hale getirmek için buradayız.",
+    "hero.body": "Sapanja Business Group, Türkiye'de yaşayan Etiyopyalılar tarafından kurulmuş, Ankara merkezli, sınır ötesi bir iş grubudur. Bu koridorun her iki yakasını da şahsen tanıyoruz: üniversiteleri, hastaneleri, gümrük ofislerini ve toplulukları. Etiyopya ile Türkiye arasındaki yolculuğu daha kolay, daha hızlı ve daha güvenilir hale getirmek için buradayız.",
     "hero.cta1": "Hizmetlerimiz", "hero.cta2": "Bize Ulaşın",
 
     "stats.students": "Türkiye'de uluslararası öğrenci",
@@ -201,7 +230,7 @@ const translations = {
 
     "about.eyebrow": "Biz Kimiz",
     "about.headline": "Her iki dünyayı da tanıyan insanlar tarafından kuruldu",
-    "about.body1": "Sapanca Business Group, Türkiye'de yaşayan bir grup Etiyopyalı profesyonel tarafından kuruldu. Fikir, bize adımızı veren şehir olan Sapanca'da doğdu. Ankara merkezli çalışıyor, İstanbul dahil Türkiye genelinde ve Etiyopya iş ve diaspora topluluğu içinde aktif bağlantılar sürdürüyoruz.",
+    "about.body1": "Sapanja Business Group, Türkiye'de yaşayan bir grup Etiyopyalı profesyonel tarafından kuruldu. Fikir, adımıza ilham veren göl kasabası Sapanca'da doğdu. Ankara merkezli çalışıyor, İstanbul dahil Türkiye genelinde ve Etiyopya iş ve diaspora topluluğu içinde aktif bağlantılar sürdürüyoruz.",
     "about.body2": "Duvarında on yıllar yazan büyük bir ajans değiliz. Hem Etiyopya'da hem Türkiye'de derin kökleri olan, odaklanmış ve deneyimli bir ekibiz: vize sürecinden şahsen geçmiş, Türk üniversitelerinde yol almış, gümrükle uğraşmış ve her iki tarafta da ilişkiler kurmuş kişileriz. Bu birinci elden bilgiyi her müşteriye taşıyoruz.",
     "about.body3": "Etiyopya ile Türkiye arasındaki koridorda güvenilir bir rehbere ihtiyaç duyan öğrenciler, hastalar, işletmeler ve ailelerle çalışıyoruz. Bildiğimiz işi üstleniriz, bilmediğimiz konuda dürüst davranırız ve her vakayı sonuna kadar takip ederiz.",
     "about.imageCaption": "Ankara Kalesi, Türkiye",
@@ -211,8 +240,8 @@ const translations = {
     "about.value4.title": "Uçtan Uca", "about.value4.desc": "İlk görüşmeden nihai sonuca kadar sürecin içinde kalıyoruz",
 
     "services.eyebrow": "Ne Yapıyoruz",
-    "services.headline": "Üç alan. Tek koridor.",
-    "services.intro": "Etiyopya ile Türkiye bağlantısının gerçek ve sürekli talep yarattığı üç temel hizmet alanına odaklanıyoruz. Bunlar, her iki tarafı da bilmemizin gerçek fark yarattığı alanlardır.",
+    "services.headline": "Dört alan. Tek koridor.",
+    "services.intro": "Etiyopya ile Türkiye bağlantısının gerçek ve sürekli talep yarattığı dört temel hizmet alanına odaklanıyoruz. Bunlar, her iki tarafı da bilmemizin gerçek fark yarattığı alanlardır.",
 
     "service1.title": "Eğitim Danışmanlığı",
     "service1.tagline": "Etiyopyalı öğrencileri Türk üniversitelerine, doğru şekilde ulaştırmak.",
@@ -229,6 +258,11 @@ const translations = {
     "service3.body": "Etiyopya ve Türkiye zaten önemli ölçüde ticaret yapıyor, ancak bu akışın çoğu toplumsal bağlantısı olmayan büyük aracılar üzerinden gerçekleşiyor. Her iki pazarı da anlayan biriyle iki ülke arasında mal taşımak isteyen işletmeler ve bireylerle çalışıyoruz. Kahve, deri ve tekstil gibi Etiyopya'ya özgü ürünler Türkiye'de gerçek bir talep görürken, inşaat malzemeleri ve makine gibi Türk ürünleri de Etiyopya'da yüksek talep görüyor.",
     "service3.imageCaption": "Liman lojistiği",
 
+    "service4.title": "Yatırım Danışmanlığı",
+    "service4.tagline": "Ciddi yatırımcıları Etiyopya'nın yeni büyüme döneminde yönlendiriyoruz.",
+    "service4.body": "Etiyopya, gayrimenkul, üretim, tarım ve altyapı alanlarında gerçek fırsatlar sunan, Afrika'nın en hızlı büyüyen ekonomilerinden biridir. Türkiye merkezli yatırımcılar için veya ağımızda sermayesini Etiyopya'nın geleceğine yatırmaya hazır olan herkes için, her müşterimize sunduğumuz aynı birinci elden rehberliği sağlıyoruz: dürüst fırsat değerlendirmesi, yerel durum tespiti ve ilk görüşmeden nihai anlaşmaya kadar yanınızda kalan bir ekip.",
+    "service4.imageCaption": "Addis Ababa'nın büyüyen silueti",
+
     "additional.eyebrow": "Ayrıca Sunulan",
     "additional.headline": "Destekleyici hizmetler",
     "additional.item1.title": "Tercüme ve Belgelendirme",
@@ -242,7 +276,7 @@ const translations = {
     "corridor.headline": "Yüzyıllara dayanan bir bağlantı",
     "corridor.body1": "Osmanlı İmparatorluğu'nun bugünkü Etiyopya ve Eritre'nin bir kısmını kapsayan resmi bir eyaleti vardı: Habeş Eyaleti. Sahra altı Afrika'daki ilk Türk Büyükelçiliği 1926'da Addis Ababa'da açıldı. Bugün 200'den fazla Türk şirketi Etiyopya'da faaliyet gösteriyor ve tahmini 2,5 milyar dolarlık yatırımla Türkiye, Etiyopya'nın en büyük yabancı yatırımcılarından biri konumundadır.",
     "corridor.body2": "Bu koridorun derin kökleri var. Eksik olan, her iki tarafı da şahsen tanıyan, sadece profesyonel olarak değil, güvenilir, deneyimli ve topluma kök salmış bir gruptur.",
-    "corridor.body3": "İşte Sapanca Business Group budur.",
+    "corridor.body3": "İşte Sapanja Business Group budur.",
     "corridor.fact1": "uluslararası öğrenci şu anda Türkiye'de okuyor",
     "corridor.fact2": "bu öğrencilerin Afrika ülkelerinden geliyor",
     "corridor.fact3": "Türkiye, dünya genelinde önde gelen sağlık turizmi destinasyonlarından biri",
@@ -310,8 +344,8 @@ const translations = {
     "about.value4.title": "ከጫፍ እስከ ጫፍ", "about.value4.desc": "ከመጀመሪያው ውይይት እስከ የመጨረሻው ውጤት ድረስ እንቆያለን",
 
     "services.eyebrow": "የምንሰራው",
-    "services.headline": "ሦስት ዘርፎች። አንድ ኮሪደር።",
-    "services.intro": "የኢትዮጵያ እና የቱርክ ግንኙነት እውነተኛ እና ተከታታይ ፍላጎት በሚፈጥርባቸው ሦስት ዋና የአገልግሎት ዘርፎች ላይ እናተኩራለን። እነዚህም ሁለቱንም ወገኖች ማወቃችን እውነተኛ ለውጥ የሚያመጣባቸው ቦታዎች ናቸው።",
+    "services.headline": "አራት ዘርፎች። አንድ ኮሪደር።",
+    "services.intro": "የኢትዮጵያ እና የቱርክ ግንኙነት እውነተኛ እና ተከታታይ ፍላጎት በሚፈጥርባቸው አራት ዋና የአገልግሎት ዘርፎች ላይ እናተኩራለን። እነዚህም ሁለቱንም ወገኖች ማወቃችን እውነተኛ ለውጥ የሚያመጣባቸው ቦታዎች ናቸው።",
 
     "service1.title": "የትምህርት ማማከር",
     "service1.tagline": "የኢትዮጵያ ተማሪዎችን ወደ ቱርክ ዩኒቨርሲቲዎች፣ በትክክለኛው መንገድ ማድረስ።",
@@ -327,6 +361,11 @@ const translations = {
     "service3.tagline": "በኢትዮጵያ እና በቱርክ መካከል በሁለቱም አቅጣጫ እቃዎችን ማንቀሳቀስ።",
     "service3.body": "ኢትዮጵያ እና ቱርክ ቀድሞውኑ በከፍተኛ ደረጃ ይነግዳሉ፣ ነገር ግን አብዛኛው ፍሰት ከማህበረሰብ ግንኙነት ውጭ በሆኑ ትላልቅ ደላሎች በኩል ያልፋል። ሁለቱንም ገበያዎች የሚረዳ ሰው ይዘው በሁለቱ አገራት መካከል እቃዎችን ማንቀሳቀስ ከሚፈልጉ ንግዶች እና ግለሰቦች ጋር እንሰራለን። እንደ ቡና፣ ቆዳ እና ጨርቃጨርቅ ያሉ የኢትዮጵያ ልዩ ምርቶች በቱርክ እውነተኛ ፍላጎት ሲኖራቸው፣ የግንባታ ቁሳቁሶች እና ማሽነሪዎች ያሉ የቱርክ ምርቶችም በኢትዮጵያ ከፍተኛ ፍላጎት አላቸው።",
     "service3.imageCaption": "የወደብ ሎጂስቲክስ",
+
+    "service4.title": "የኢንቨስትመንት ማማከር",
+    "service4.tagline": "ከባድ ኢንቨስተሮችን ወደ ኢትዮጵያ ቀጣዩ የዕድገት ምዕራፍ እንመራለን።",
+    "service4.body": "ኢትዮጵያ በሪል እስቴት፣ በማምረቻ፣ በግብርና እና በመሠረተ ልማት ውስጥ እውነተኛ እድል ካላቸው በአፍሪካ በፍጥነት ከሚያድጉ ኢኮኖሚዎች አንዷ ናት። በቱርክ ለሚገኙ ኢንቨስተሮች ወይም ካፒታላቸውን ወደ ኢትዮጵያ የወደፊት ሁኔታ ለማስገባት ዝግጁ ለሆኑ በአውታረ መረባችን ውስጥ ላሉ ማንኛውም ሰው፣ ለእያንዳንዱ ደንበኛ የምናቀርበውን ተመሳሳይ ቀጥተኛ መመሪያ እናቀርባለን፦ ሐቀኛ የእድል ግምገማ፣ የአካባቢ ጥንቃቄ ማጣራት፣ እናም ከመጀመሪያው ውይይት እስከ የመጨረሻው ስምምነት ድረስ አብሮዎት የሚቆይ ቡድን።",
+    "service4.imageCaption": "እያደገ ያለው የአዲስ አበባ ገጽታ",
 
     "additional.eyebrow": "እንዲሁም የሚገኙ",
     "additional.headline": "ተጨማሪ አገልግሎቶች",
