@@ -30,6 +30,12 @@
   50%{ box-shadow: 0 0 0 6px rgba(220,174,99,0); }
 }
 
+.trust-line{
+  display:flex; align-items:center; gap:.55rem; margin:1.1rem 0 0;
+  color: rgba(245,239,228,.8); font-size:.9rem; font-weight:600;
+}
+.trust-line svg{ width:18px; height:18px; fill:none; stroke: var(--gold-light); stroke-width:1.8; flex-shrink:0; }
+
 .hero-stats{ display:flex; gap: 2.6rem; flex-wrap:wrap; padding-top:2rem; margin-top:2rem; border-top:1px solid rgba(255,255,255,.18); }
 .hero-stat{ display:flex; flex-direction:column; }
 .hero-stat-num{ font-family:'Bricolage Grotesque',sans-serif; font-weight:800; font-size:1.9rem; color: var(--gold-light); }

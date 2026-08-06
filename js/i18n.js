@@ -117,7 +117,7 @@ const translations = {
 
     "hero.eyebrow": "Ankara · Addis Ababa · Istanbul",
     "hero.headline": "Where East Africa meets Anatolia.",
-    "hero.subheadline": "We connect Ethiopia and Türkiye through education, health, and trade.",
+    "hero.subheadline": "We connect Ethiopia and Türkiye through education, health, trade, and investment.",
     "hero.body": "Sapanja Business Group is an Ankara-based, cross-border business group founded by Ethiopians living in Türkiye. We know both sides of this corridor personally: the universities, the hospitals, the customs offices, and the communities. We are here to make the journey between Ethiopia and Türkiye easier, faster, and more trustworthy.",
     "hero.cta1": "Our Services", "hero.cta2": "Get in Touch",
 
@@ -205,7 +205,7 @@ const translations = {
     "form.firstName": "First Name", "form.lastName": "Last Name",
     "form.email": "Email Address", "form.phone": "Phone / WhatsApp Number",
     "form.interest": "I'm interested in", "form.message": "Message", "form.submit": "Send Message",
-    "form.opt.education": "Education", "form.opt.health": "Health Tourism", "form.opt.trade": "Trade",
+    "form.opt.education": "Education", "form.opt.health": "Health Tourism", "form.opt.trade": "Trade", "form.opt.investment": "Investment Consulting",
     "form.opt.translation": "Translation", "form.opt.travel": "Travel & Visa",
     "form.opt.business": "Business Introduction", "form.opt.other": "Other",
     "form.sending": "Sending...",
@@ -225,7 +225,7 @@ const translations = {
 
     "hero.eyebrow": "Ankara · Addis Ababa · İstanbul",
     "hero.headline": "Doğu Afrika'nın Anadolu ile buluştuğu yer.",
-    "hero.subheadline": "Etiyopya ile Türkiye'yi eğitim, sağlık ve ticaret alanlarında birbirine bağlıyoruz.",
+    "hero.subheadline": "Etiyopya ile Türkiye'yi eğitim, sağlık, ticaret ve yatırım alanlarında birbirine bağlıyoruz.",
     "hero.body": "Sapanja Business Group, Türkiye'de yaşayan Etiyopyalılar tarafından kurulmuş, Ankara merkezli, sınır ötesi bir iş grubudur. Bu koridorun her iki yakasını da şahsen tanıyoruz: üniversiteleri, hastaneleri, gümrük ofislerini ve toplulukları. Etiyopya ile Türkiye arasındaki yolculuğu daha kolay, daha hızlı ve daha güvenilir hale getirmek için buradayız.",
     "hero.cta1": "Hizmetlerimiz", "hero.cta2": "Bize Ulaşın",
 
@@ -313,7 +313,7 @@ const translations = {
     "form.firstName": "Ad", "form.lastName": "Soyad",
     "form.email": "E-posta Adresi", "form.phone": "Telefon / WhatsApp Numarası",
     "form.interest": "İlgi alanınız", "form.message": "Mesaj", "form.submit": "Mesaj Gönder",
-    "form.opt.education": "Eğitim", "form.opt.health": "Sağlık Turizmi", "form.opt.trade": "Ticaret",
+    "form.opt.education": "Eğitim", "form.opt.health": "Sağlık Turizmi", "form.opt.trade": "Ticaret", "form.opt.investment": "Yatırım Danışmanlığı",
     "form.opt.translation": "Tercüme", "form.opt.travel": "Seyahat & Vize",
     "form.opt.business": "İş Bağlantısı", "form.opt.other": "Diğer",
     "form.sending": "Gönderiliyor...",
@@ -333,7 +333,7 @@ const translations = {
 
     "hero.eyebrow": "አንካራ · አዲስ አበባ · ኢስታንቡል",
     "hero.headline": "ምስራቅ አፍሪካ ከአናቶሊያ የሚገናኙበት ቦታ።",
-    "hero.subheadline": "ኢትዮጵያን እና ቱርክን በትምህርት፣ በጤና እና በንግድ እናገናኘዋለን።",
+    "hero.subheadline": "ኢትዮጵያን እና ቱርክን በትምህርት፣ በጤና፣ በንግድ እና በኢንቨስትመንት እናገናኘዋለን።",
     "hero.body": "ሳፓንጃ ቢዝነስ ግሩፕ በአንካራ የሚገኝ፣ በቱርክ በሚኖሩ ኢትዮጵያውያን የተመሰረተ ድንበር ተሻጋሪ የንግድ ቡድን ነው። የዚህን ኮሪደር ሁለቱንም ጎን በግል እናውቃለን፦ ዩኒቨርሲቲዎቹን፣ ሆስፒታሎቹን፣ የጉምሩክ ቢሮዎቹን እና ማህበረሰቦቹን። በኢትዮጵያ እና በቱርክ መካከል ያለውን ጉዞ ቀላል፣ ፈጣን እና የበለጠ ታማኝ ለማድረግ እዚህ ነን።",
     "hero.cta1": "አገልግሎቶቻችን", "hero.cta2": "ያግኙን",
 
@@ -421,7 +421,7 @@ const translations = {
     "form.firstName": "የመጀመሪያ ስም", "form.lastName": "የአባት ስም",
     "form.email": "የኢሜይል አድራሻ", "form.phone": "ስልክ / ዋትስአፕ ቁጥር",
     "form.interest": "የሚፈልጉት አገልግሎት", "form.message": "መልእክት", "form.submit": "መልእክት ላክ",
-    "form.opt.education": "ትምህርት", "form.opt.health": "የጤና ቱሪዝም", "form.opt.trade": "ንግድ",
+    "form.opt.education": "ትምህርት", "form.opt.health": "የጤና ቱሪዝም", "form.opt.trade": "ንግድ", "form.opt.investment": "የኢንቨስትመንት አማካሪ",
     "form.opt.translation": "ትርጉም", "form.opt.travel": "ጉዞ እና ቪዛ",
     "form.opt.business": "የንግድ ትውውቅ", "form.opt.other": "ሌላ",
     "form.sending": "በመላክ ላይ...",
