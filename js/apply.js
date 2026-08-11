@@ -102,6 +102,23 @@
 
   const EMAIL_ENDPOINT = "https://formsubmit.co/ajax/info@sapanjabusinessgroup.com";
 
+  const successModal = document.getElementById("successModal");
+  const successModalBackdrop = document.getElementById("successModalBackdrop");
+  const successModalClose = document.getElementById("successModalClose");
+  function openSuccessModal(){
+    successModal.classList.add("open");
+    successModal.setAttribute("aria-hidden", "false");
+  }
+  function closeSuccessModal(){
+    successModal.classList.remove("open");
+    successModal.setAttribute("aria-hidden", "true");
+  }
+  successModalBackdrop.addEventListener("click", closeSuccessModal);
+  successModalClose.addEventListener("click", closeSuccessModal);
+  document.addEventListener("keydown", function(e){
+    if(e.key === "Escape") closeSuccessModal();
+  });
+
   function labelFor(selectEl){
     return selectEl.options[selectEl.selectedIndex].text;
   }
@@ -155,8 +172,9 @@
 
     const dict = currentDict();
     if(delivered){
-      formNote.textContent = dict["form.successNote"] || translations.en["form.successNote"];
+      formNote.textContent = "";
       applyForm.reset();
+      openSuccessModal();
     } else {
       formNote.textContent = dict["form.errorNote"] || translations.en["form.errorNote"];
       formNote.classList.add("form-note-error");

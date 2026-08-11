@@ -2,6 +2,37 @@
    Sapanja Business Group - Fall 2026-27 application page
 =================================================================== */
 
+/* ---------- Success modal ---------- */
+.success-modal{
+  position:fixed; inset:0; z-index:9998;
+  display:flex; align-items:center; justify-content:center; padding:1.5rem;
+  opacity:0; visibility:hidden; transition: opacity .3s var(--ease), visibility .3s var(--ease);
+}
+.success-modal.open{ opacity:1; visibility:visible; }
+.success-modal-backdrop{
+  position:absolute; inset:0; background: rgba(10,15,26,.6); backdrop-filter: blur(4px);
+}
+.success-modal-card{
+  position:relative; z-index:1; background: var(--surface); color: var(--text);
+  border-radius: var(--radius); box-shadow: var(--shadow-lg);
+  padding: 2.6rem 2.2rem 2.2rem; max-width: 420px; width:100%; text-align:center;
+  transform: translateY(18px) scale(.96); opacity:0;
+  transition: transform .35s var(--ease), opacity .35s var(--ease);
+}
+.success-modal.open .success-modal-card{ transform: translateY(0) scale(1); opacity:1; }
+.success-modal-check{
+  display:flex; align-items:center; justify-content:center;
+  width:64px; height:64px; border-radius:50%; margin:0 auto 1.2rem;
+  background: linear-gradient(135deg,#3fb87f,#2a9d63);
+  box-shadow: 0 10px 24px rgba(42,157,99,.35);
+}
+.success-modal-check svg{ width:30px; height:30px; }
+.success-modal-card h3{
+  font-family:'Bricolage Grotesque',sans-serif; font-size:1.35rem; margin-bottom:.7rem;
+}
+.success-modal-card p{ color: var(--text-muted); font-size:.96rem; line-height:1.6; margin-bottom:1.6rem; }
+.success-modal-close{ width:100%; justify-content:center; }
+
 .apply-nav{ margin-inline:auto; }
 .apply-nav a{
   font-size:.92rem; font-weight:500; color: var(--text-muted);

@@ -206,7 +206,7 @@
       <div class="form-field">
         <label for="budget" data-i18n="form.budget">Annual Tuition Budget (USD)</label>
         <select id="budget" name="budget">
-          <option value="b1" data-i18n="form.budget.b1">Under $2,000</option>
+          <option value="b1" data-i18n="form.budget.b1">$2,000 (Minimum Starting Budget)</option>
           <option value="b2" data-i18n="form.budget.b2">$2,000 - $4,000</option>
           <option value="b3" data-i18n="form.budget.b3">$4,000 - $6,000</option>
           <option value="b4" data-i18n="form.budget.b4">$6,000+</option>
@@ -252,6 +252,18 @@
 <button type="button" class="back-to-top" id="backToTop" aria-label="Back to top">
   <svg viewBox="0 0 24 24"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
 </button>
+
+<div class="success-modal" id="successModal" aria-hidden="true">
+  <div class="success-modal-backdrop" id="successModalBackdrop"></div>
+  <div class="success-modal-card" role="dialog" aria-modal="true" aria-labelledby="successModalTitle">
+    <span class="success-modal-check">
+      <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 6"/></svg>
+    </span>
+    <h3 id="successModalTitle" data-i18n="modal.successTitle">Application Received</h3>
+    <p data-i18n="modal.successBody">Thank you. Your application has reached our team and we will contact you on WhatsApp or Telegram shortly.</p>
+    <button type="button" class="btn btn-gold success-modal-close" id="successModalClose" data-i18n="modal.successClose">Done</button>
+  </div>
+</div>
 
 <script src="js/apply-i18n.js"></script>
 <script src="js/apply.js"></script>

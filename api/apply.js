@@ -35,6 +35,20 @@ module.exports = async function handler(req, res) {
     "Annual Tuition Budget: " + (budget || "-")
   ].join("\n");
 
+  const sheetsUrl = process.env.GOOGLE_SHEETS_WEBHOOK_URL;
+  const sheetsSecret = process.env.GOOGLE_SHEETS_SECRET;
+  if (sheetsUrl && sheetsSecret) {
+    try {
+      await fetch(sheetsUrl, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ secret: sheetsSecret, fullName, email, phone, department, level, city, budget })
+      });
+    } catch (err) {
+      /* non-blocking: Telegram/email remain the primary delivery channels */
+    }
+  }
+
   try {
     const tgRes = await fetch(`https://api.telegram.org/bot${token}/sendMessage`, {
       method: "POST",
