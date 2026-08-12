@@ -8,12 +8,14 @@ module.exports = async function handler(req, res) {
   if (typeof body === "string") {
     try { body = JSON.parse(body); } catch (e) { body = {}; }
   }
-  const { fullName, email, phone, department, level, city, budget } = body || {};
+  const { fullName, email, phone, department, level, city, budget, lang } = body || {};
 
   if (!fullName || !phone) {
     res.status(400).json({ error: "Missing required fields" });
     return;
   }
+
+  const applicationId = "app_" + Date.now().toString(36) + "_" + Math.random().toString(36).slice(2, 10);
 
   const token = process.env.TELEGRAM_BOT_TOKEN;
   const chatId = process.env.TELEGRAM_CHAT_ID;
@@ -42,7 +44,7 @@ module.exports = async function handler(req, res) {
       await fetch(sheetsUrl, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ secret: sheetsSecret, fullName, email, phone, department, level, city, budget })
+        body: JSON.stringify({ secret: sheetsSecret, fullName, email, phone, department, level, city, budget, applicationId })
       });
     } catch (err) {
       /* non-blocking: Telegram/email remain the primary delivery channels */
@@ -60,7 +62,7 @@ module.exports = async function handler(req, res) {
       res.status(502).json({ error: "Telegram delivery failed", detail: tgData });
       return;
     }
-    res.status(200).json({ ok: true });
+    res.status(200).json({ ok: true, applicationId, telegramStart: applicationId + "_" + (lang || "en") });
   } catch (err) {
     res.status(500).json({ error: "Server error" });
   }

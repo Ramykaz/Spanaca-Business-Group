@@ -105,7 +105,15 @@
   const successModal = document.getElementById("successModal");
   const successModalBackdrop = document.getElementById("successModalBackdrop");
   const successModalClose = document.getElementById("successModalClose");
-  function openSuccessModal(){
+  const successModalTelegram = document.getElementById("successModalTelegram");
+  const TELEGRAM_BOT_USERNAME = "SapanjaApp_bot";
+  function openSuccessModal(telegramStart){
+    if(telegramStart){
+      successModalTelegram.href = "https://t.me/" + TELEGRAM_BOT_USERNAME + "?start=" + encodeURIComponent(telegramStart);
+      successModalTelegram.classList.add("visible");
+    } else {
+      successModalTelegram.classList.remove("visible");
+    }
     successModal.classList.add("open");
     successModal.setAttribute("aria-hidden", "false");
   }
@@ -143,11 +151,16 @@
     formNote.textContent = "";
     formNote.classList.remove("form-note-error");
 
+    const currentLang = root.getAttribute("data-current-lang") || "en";
+
     const telegramPromise = fetch("/api/apply", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ fullName, email, phone, department, level, city, budget })
-    }).then(function(r){ return r.ok; }).catch(function(){ return false; });
+      body: JSON.stringify({ fullName, email, phone, department, level, city, budget, lang: currentLang })
+    }).then(function(r){
+      if(!r.ok) return { ok: false };
+      return r.json().then(function(data){ return { ok: true, telegramStart: data.telegramStart }; }).catch(function(){ return { ok: true }; });
+    }).catch(function(){ return { ok: false }; });
 
     const emailPromise = fetch(EMAIL_ENDPOINT, {
       method: "POST",
@@ -165,7 +178,8 @@
     }).then(function(r){ return r.ok; }).catch(function(){ return false; });
 
     const results = await Promise.all([telegramPromise, emailPromise]);
-    const delivered = results.some(function(ok){ return ok; });
+    const telegramResult = results[0];
+    const delivered = telegramResult.ok || results[1];
 
     submitBtn.disabled = false;
     submitBtn.textContent = submitLabel;
@@ -174,7 +188,7 @@
     if(delivered){
       formNote.textContent = "";
       applyForm.reset();
-      openSuccessModal();
+      openSuccessModal(telegramResult.telegramStart);
     } else {
       formNote.textContent = dict["form.errorNote"] || translations.en["form.errorNote"];
       formNote.classList.add("form-note-error");

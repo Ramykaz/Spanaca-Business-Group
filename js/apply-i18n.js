@@ -59,6 +59,7 @@ const translations = {
     "modal.successTitle": "Application Received",
     "modal.successBody": "Thank you. Your application has reached our team and we will contact you on WhatsApp or Telegram shortly.",
     "modal.successClose": "Done",
+    "modal.telegramCta": "Get Confirmation on Telegram",
     "form.errorNote": "Something went wrong. Please contact us directly on WhatsApp or by phone.",
 
     "footer.tagline": "A Bridge Between Nations",
@@ -123,6 +124,7 @@ const translations = {
     "modal.successTitle": "Başvurunuz Alındı",
     "modal.successBody": "Teşekkürler. Başvurunuz ekibimize ulaştı, kısa süre içinde WhatsApp veya Telegram üzerinden sizinle iletişime geçeceğiz.",
     "modal.successClose": "Tamam",
+    "modal.telegramCta": "Telegram'da Onay Alın",
     "form.errorNote": "Bir şeyler ters gitti. Lütfen doğrudan WhatsApp veya telefon ile bize ulaşın.",
 
     "footer.tagline": "Uluslar Arasında Bir Köprü",
@@ -187,6 +189,7 @@ const translations = {
     "modal.successTitle": "ማመልከቻዎ ደርሶናል",
     "modal.successBody": "እናመሰግናለን። ማመልከቻዎ ለቡድናችን ደርሷል፣ በቅርቡ በዋትሳፕ ወይም በቴሌግራም እናገኝዎታለን።",
     "modal.successClose": "ተከናውኗል",
+    "modal.telegramCta": "በቴሌግራም ማረጋገጫ ያግኙ",
     "form.errorNote": "የሆነ ችግር ተፈጥሯል። እባክዎ በቀጥታ በዋትስአፕ ወይም በስልክ ያግኙን።",
 
     "footer.tagline": "በሀገራት መካከል ያለ ድልድይ",

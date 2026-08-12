@@ -32,6 +32,10 @@
 }
 .success-modal-card p{ color: var(--text-muted); font-size:.96rem; line-height:1.6; margin-bottom:1.6rem; }
 .success-modal-close{ width:100%; justify-content:center; }
+.success-modal-telegram{
+  width:100%; justify-content:center; margin-bottom:.8rem; display:none;
+}
+.success-modal-telegram.visible{ display:inline-flex; }
 
 .apply-nav{ margin-inline:auto; }
 .apply-nav a{
